@@ -3,7 +3,7 @@ VLANs, VTP, STP
 
 
 ## Distribucion de ip's  📄
-| Dispositivo | VLAN  | Dirección IP  | Mascada de red| Gateway | | Virtualizada Si/No |
+| Dispositivo | VLAN  | Dirección IP  | Mascada de red| Gateway | Virtualizada Si/No |
 | ------------- | ------------- | -------------| ------------- | ------------- | ------------- |
 | ADMIN 1 f1/9 | 10 | 192.168.116.10 | 255.255.255.192 | 192.168.116.1 | NO | 
 | ADMIN 2 f1/9 | 10 | 192.168.116.11 | 255.255.255.192 | 192.168.116.1 | NO |
