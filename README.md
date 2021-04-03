@@ -1,0 +1,2 @@
+# Redes1P2
+VLANs, VTP, STP
