@@ -36,17 +36,7 @@ VLANs, VTP, STP
 | Po2 | Entre ESW6 y ESW7 | 2 enlaces | f1/3 - 4 |
 | Po3 | Entre ESW5 y ESW7 | 2 enlaces | f1/5 - 6 |
 | Po4 | Entre ESW6 y ESW11 | 2 enlaces | f1/7 - 8 |
-| truncal | SWC3 y SWC2 |  | f1/1  
-
-#### EtherChannel
-| pc | puerto | sw | modo |
-| ------------- | ------------- | ------------- | ------------- |
-| Po1 | Entre ESW5 y ESW6 | 2 enlaces | f1/1 - 2 |
-| Po2 | Entre ESW6 y ESW7 | 2 enlaces | f1/3 - 4 |
-| Po3 | Entre ESW5 y ESW7 | 2 enlaces | f1/5 - 6 |
-| Po4 | Entre ESW6 y ESW11 | 2 enlaces | f1/7 - 8 |
-| truncal | SWC3 y SWC2 |  | f1/0 - p1  |
-
+| truncal | SWC3 y SWC2 |  | f1/0 - p1
 
 
 
