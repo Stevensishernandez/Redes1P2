@@ -40,6 +40,7 @@
 
 # Topologia2
 
+![unknown](https://user-images.githubusercontent.com/34359891/113498698-917c1700-94cc-11eb-944f-734a93393eda.png)
 
 ### EtherChannel
 | EtherChanne | Entre | Enlaces | Puertos |
