@@ -27,7 +27,8 @@
 | PC5 (INFORMATICA) | p5 | 30 | 192.168.116.138 | 255.255.255.192 | 192.168.116.129 | NO | ETHR4 |
 | BD | f1/11 | 30 | 192.168.116.139 | 255.255.255.192 | 192.168.116.129 | SI | ESW9 |
 
-# Topologia1 .
+# Topologia1
+![topo1](https://user-images.githubusercontent.com/53025349/113494603-fe7cb600-94a6-11eb-842d-2d8e5b45c276.jpg)
 
 
 ### EtherChannel
