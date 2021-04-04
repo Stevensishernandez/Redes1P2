@@ -51,7 +51,7 @@
 | Po5 | Entre ESW2 y ESW4 | 3 enlaces | f1/12 - 14 |
 
 # Topologia3
-
+![topo3](https://github.com/jmansilla-2014056/galery/blob/master/Nueva%20carpeta/Topologia3.jpeg)
 
 ### EtherChannel
 | EtherChanne | Entre | Enlaces | Puertos |
