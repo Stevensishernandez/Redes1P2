@@ -64,4 +64,20 @@
 | truncal | SWC3 y SWC2 |  | f1/0 - p1
 
 
+## VPN :blue_book:
+
+Para conectar los 2 equipos con los que se realizo la practica, se utilizo el programa Open VPN, las direcciones y las llaves son generadas gracias a servicios de google cloud con una instacia ec2 y una regla de firewall. Basta con tener conexion y arrastrar el archivo (llave) al programa para configurar la VPN.
+
+<div align='center'>
+<img src="https://github.com/Stevensishernandez/RPV_PR1_1S2021/blob/main/image/OpenVpnMiguel.jpeg" width="35%" height="35%"/>
+</div>
+
+## Apache :green_book:
+
+Los servicos de HTTP se montaron gracias a la ayuda de apache, regularmente todos los servicios son repartidos en sistemas operativos especiales para servidores pero en esta ocacion lo mas simple para levantar paginas es levantar servios con los host, la instalacion y utilizacion de apache en maquinas linux se resume en los siguientes comandos.
+    
+    sudo apt-get update
+    sudo apt-get install apache2
+
+
 
