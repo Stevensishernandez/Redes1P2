@@ -38,6 +38,55 @@
 | Po2 | Entre ESW9 y ESW10 | 2 enlaces | f1/3 - 4 |
 | Po3 | Entre ESW8 y ESW10 | 2 enlaces | f1/5 - 6 |
 
+
+### Configuracion ESW8
+```
+conf t
+interface range f1/1 - 2
+channel-group 1 mode on
+
+exit
+
+interface range f1/5 - 6
+channel-group 3 mode on
+
+end
+
+show etherchannel port-channel
+
+conf t
+
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+exit
+
+interface port-channel 3
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+end
+show int trunk
+
+
+conf t
+vtp domain Grupo16
+vtp password Grupo16
+vtp mode client
+end
+sh vtp status
+Sh vlan-sw
+
+confi t
+
+int f1/9
+switchport mode access
+switchport access vlan 10
+End
+Sh vlan-sw
+
+wr
+```
+
 # Topologia2
 
 ![unknown](https://user-images.githubusercontent.com/34359891/113498698-917c1700-94cc-11eb-944f-734a93393eda.png)
