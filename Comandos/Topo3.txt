@@ -1,0 +1,211 @@
+//--------- Conta1 
+ip 192.168.116.70 255.255.255.192 192.168.116.65
+save
+
+//---------- Conta2
+ip 192.168.116.71 255.255.255.192 192.168.116.65
+save
+
+//---------- Ventas1
+ip 192.168.116.135 255.255.255.192 192.168.116.129
+save
+
+//---------- Ventas2
+ip 192.168.116.136 255.255.255.192 192.168.116.129
+save
+
+//---------- Informatica1
+ip 192.168.116.138 255.255.255.192 192.168.116.129
+save
+
+// ETHR3
+p1 - dot1q
+p7 -vlan 20
+p3 - vlan 30
+
+// ETHR4
+p1 - dot1q
+p5 - vlan 30
+p3 - vlan 30
+
+//-------- ESW5
+conf t
+interface range f1/1 - 2
+channel-group 1 mode on
+
+exit
+
+interface range f1/5 - 6
+channel-group 3 mode on
+
+end
+
+show etherchannel port-channel
+
+conf t
+
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+exit
+
+interface port-channel 3
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+exit
+
+int f1/0
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+exit
+
+end
+show int trunk
+
+
+conf t
+vtp domain Grupo16
+vtp password Grupo16
+vtp mode client
+end
+sh vtp status
+Sh vlan-sw
+wr
+
+//-------- ESW6
+
+conf t
+interface range f1/1 - 2
+channel-group 1 mode on
+exit
+
+interface range f1/3 - 4
+channel-group 2 mode on
+exit
+
+interface range f1/7 - 8
+channel-group 4 mode on
+
+end
+
+show etherchannel port-channel
+
+conf t
+
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+exit
+
+interface port-channel 2
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+exit
+
+
+interface port-channel 4
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+exit
+
+int f1/0
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+end
+
+show int trunk
+
+conf t
+vtp domain Grupo16
+vtp password Grupo16
+vtp mode client
+end
+sh vtp status
+
+Sh vlan-sw
+
+wr
+
+
+//-------- ESW7
+
+
+conf t
+
+interface range f1/3 - 4
+channel-group 2 mode on
+exit
+
+interface range f1/5 - 6
+channel-group 3 mode on
+
+end
+
+show etherchannel port-channel
+
+conf t
+
+int f1/0
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+exit
+
+interface port-channel 2
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+exit
+
+interface port-channel 3
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+end
+
+show int trunk
+
+
+conf t
+vtp domain Grupo16
+vtp password Grupo16
+vtp mode client
+end
+sh vtp status
+Sh vlan-sw
+wr
+
+//-------- ESW11
+conf t
+
+interface range f1/7 - 8
+channel-group 4 mode on
+end 
+
+show etherchannel port-channel
+
+conf t
+
+interface port-channel 4
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,1002-1005
+end
+
+show int trunk
+
+
+conf t
+vtp domain Grupo16
+vtp password Grupo16
+vtp mode client
+end
+sh vtp status
+Sh vlan-sw
+
+conf t
+int f1/12
+switchport mode access
+switchport access vlan 20
+End
+
+Sh vlan-sw
+
+
+wr
